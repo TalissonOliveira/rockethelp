@@ -4,6 +4,7 @@ import { NativeBaseProvider, StatusBar } from 'native-base'
 import { THEME } from './src/styles/theme'
 import { SignIn } from './src/screens/SignIn'
 import { Loading } from './src/components/Loading'
+import { Home } from './src/screens/Home'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,7 +20,7 @@ export default function App() {
         translucent
       />
 
-      { fontsLoaded ? <SignIn /> : <Loading /> }
+      { fontsLoaded ? <Home /> : <Loading /> }
     </NativeBaseProvider>
   )
 }
